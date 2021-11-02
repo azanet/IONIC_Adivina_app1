@@ -3,9 +3,13 @@
 
 <ion-content>
 
+    
     <!--"IF-ELSE(1)"; MOSTRANDO la "CARD" SEGIR probando-->
     <ion-card-content *ngIf=" numberFinal != numSecret; else winner" class="ion-margin">
-        <ion-label class="labels1 ion-padding-top">Introduzca número entre 0 y 100:</ion-label>
+        
+        <h1 class="ion-padding ion-text-center labels1 ion-text-uppercase" > adivina el número </h1>
+
+        <ion-label class="labels1 ">Introduzca número entre 0 y 100:</ion-label>
 
         <ion-input type="number" min="0" max="100" value="number" placeholder="Introduzca Número"
             [(ngModel)]="numberUser"></ion-input>
@@ -32,6 +36,9 @@
     <ng-template #winner>
 
         <ion-card-content class="ion-margin">
+            
+            <h1 class="ion-padding ion-text-center labels1 ion-text-uppercase" > Número adivinado </h1>
+
             <h1 class="ion-text-center labels2">¡¡ Felicidades !!</h1>
             <img style="width: auto;height: auto; margin: auto; margin-top: 5%;border-radius:5%" alt="groot-contento" src="../../../assets/images/groot.jpg" >
             <h1 class="ion-text-center labels2" style="margin-top: 5%;" >{{numberFinal}}<br />¡¡Era el número Secreto!!</h1>
@@ -50,7 +57,7 @@
    
 
 
-    <ion-card *ngIf="numberFinal !== -1 && numberFinal !== numSecret;">
+    <ion-card *ngIf="numberFinal >= 0 && numberFinal !== numSecret;">
 
         <h1 class="ion-text-center labels1" >¡¡Vuelva a Intentarlo!!</h1>
         <img style="width: auto;height: auto; margin: auto; margin-bottom: 0; border-radius:50%;" alt="grootParanoya" src="../../../assets/images/grootLose.jpg">

@@ -6,8 +6,13 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   games: number= 0;
-  errors: number= 0;
-  media: number= Math.floor((this.games/this.errors)*100);
+  attemps: number= 0;
+  media: number= 0;
 
-  constructor() { }
+  calculateMedia(){
+
+    this.media= Math.round((this.games/this.attemps)*100);
+  }
+
+  constructor() {}
 }
