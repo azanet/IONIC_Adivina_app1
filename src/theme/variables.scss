@@ -145,6 +145,8 @@
     --ion-color-light-contrast-rgb: 255,255,255;
     --ion-color-light-shade: #1e2023;
     --ion-color-light-tint: #383a3e;
+    
+     
   }
 
   /*
@@ -233,4 +235,27 @@
 
     --ion-card-background: #1e1e1e;
   }
+
+}
+
+//AÑADIENDO BACKGROUND PERSONALIZADO A TODA LA APP
+.ios {
+  --ion-background-color: #f0f7da;
+}
+
+.md {
+  --ion-background-color: #f0f7da;
+}
+
+
+ion-button {
+  --background: 	#36802d;
+}
+
+.labels1{
+  color: 	#234d20 ;
+}
+
+.labels2{
+  color: #36802d;
 }
