@@ -5,7 +5,6 @@
 
     <!--"IF-ELSE(1)"; MOSTRANDO la "CARD" SEGIR probando-->
     <ion-card-content *ngIf=" numberFinal != numSecret; else winner" class="ion-margin">
-
         <ion-label class="labels1 ion-padding-top">Introduzca número entre 0 y 100:</ion-label>
 
         <ion-input type="number" min="0" max="100" value="number" placeholder="Introduzca Número"
@@ -24,12 +23,12 @@
                 disabled="false">
                 comprobar número
             </ion-button>
-        </ng-template>
+        </ng-template><!--FIN DEL "IF-ELSE(2)";-->
 
     </ion-card-content>
 
-    <!--"ELSE del IF(1); "MOSTRANDO LA "CARD" de GANADOR.-->
 
+    <!--"ELSE del IF(1); "MOSTRANDO LA "CARD" de GANADOR.-->
     <ng-template #winner>
 
         <ion-card-content class="ion-margin">
@@ -38,13 +37,17 @@
             <h1 class="ion-text-center labels2" style="margin-top: 5%;" >{{numberFinal}}<br />¡¡Era el número Secreto!!</h1>
 
 
-            <ion-button class="ion-margin-top" (click)="reTry()" expand="block" shape="round">
+            <ion-button class="ion-margin-top" (click)="reTry()"  shape="round">
                 Volver a Jugar
+            </ion-button>
+
+            <ion-button class="ion-margin-top" routerLink="/status"  shape="round">
+                ver status
             </ion-button>
         </ion-card-content>
 
-    </ng-template>
-    <!--FIN DEL "IF-ELSE(1)";-->
+    </ng-template> <!--FIN DEL "IF-ELSE(1)";-->
+   
 
 
     <ion-card *ngIf="numberFinal !== -1 && numberFinal !== numSecret;">

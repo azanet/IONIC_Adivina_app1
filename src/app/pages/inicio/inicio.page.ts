@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { StatusPage } from '../status/status.page';
 
 @Component({
   selector: 'app-inicio',
@@ -9,18 +8,16 @@ import { StatusPage } from '../status/status.page';
 
 export class InicioPage implements OnInit {
 
-  numberFinal: number;
+  numberFinal: number= -1;
 
   numberUser: number;
 
-  numSecret: number;
+  numSecret: number= this.numAleatorio(0, 100);
 
   hintNumber: string;
 
   constructor() {
-    this.numSecret = this.numAleatorio(0, 100);
-    //   debugger;
-    this.numberFinal = -1;
+  
   }
 
 
@@ -61,5 +58,6 @@ export class InicioPage implements OnInit {
     this.numberFinal = -1;
 
   }
+
 
   }

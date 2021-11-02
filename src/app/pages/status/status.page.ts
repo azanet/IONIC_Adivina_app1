@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { InicioPage } from '../inicio/inicio.page';
-import { AppComponent } from '../../app.component';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-status',
@@ -10,7 +9,7 @@ import { AppComponent } from '../../app.component';
 export class StatusPage implements OnInit {
 
 
-  constructor() { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit() {
   }

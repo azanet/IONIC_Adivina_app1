@@ -1,7 +1,25 @@
 <app-header></app-header>
 
 <ion-content>
-  
-        <h1>Numero: {{number}}</h1>
-    
+        <ion-card-content>
+                <img src="../../../assets/images/analitics.png" alt="Analitics" style="border-radius: 5%;" >
+
+                <h1>Partidas Jugadas: {{dataService.games}}</h1>
+                <br />
+                <h1>Intentos Realizados: {{dataService.errors}}</h1>
+                <br />
+                <h1>Media de aciertos: {{dataService.media}}%</h1>
+
+
+                <ion-button routerLink="/inicio" expand="block" shape="round">
+                        volver
+                </ion-button>
+
+
+
+
+        </ion-card-content>
+
+
+
 </ion-content>
