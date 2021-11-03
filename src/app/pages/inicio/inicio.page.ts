@@ -18,7 +18,7 @@ export class InicioPage implements OnInit {
   hintNumber: string;
 
   constructor(private dataService: DataService) {
-  
+  debugger;
   }
 
 

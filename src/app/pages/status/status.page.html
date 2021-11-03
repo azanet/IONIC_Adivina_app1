@@ -5,11 +5,11 @@
                 <h1 class="ion-padding-top ion-text-center labels1">-- STATUS --</h1>
                 <img class="ion-margin-top ion-margin-bottom" src="../../../assets/images/analitics.png" alt="Analitics" style="border-radius: 5%;" >
 
-                <h1 class="labels2">Partidas Jugadas: {{dataService.games}}</h1>
+                <h1 class="labels2">Partidas: {{dataService.games}}</h1>
                 <br />
-                <h1 class="labels2">Intentos Realizados: {{dataService.attemps}}</h1>
+                <h1 class="labels2">Intentos: {{dataService.attemps}}</h1>
                 <br />
-                <h1 class="ion-padding-bottom labels2">Media de aciertos: {{dataService.media}}%</h1>
+                <h1 class="ion-padding-bottom labels2">Adivin@: {{dataService.media | percent:'2.2-3'}}</h1>
 
 
                 <ion-button class="ion-margin-top" routerLink="/inicio" expand="block" shape="round">

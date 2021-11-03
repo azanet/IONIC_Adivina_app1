@@ -11,7 +11,7 @@ export class DataService {
 
   calculateMedia(){
 
-    this.media= Math.round((this.games/this.attemps)*100);
+    this.media= (this.games/this.attemps);
   }
 
   constructor() {}

@@ -5,9 +5,9 @@
 
     
     <!--"IF-ELSE(1)"; MOSTRANDO la "CARD" SEGIR probando-->
-    <ion-card-content *ngIf=" numberFinal != numSecret; else winner" class="ion-margin">
+    <ion-card-content *ngIf=" numberFinal != numSecret; else winner">
         
-        <h1 class="ion-padding ion-text-center labels1 ion-text-uppercase" > adivina el número </h1>
+        <h1 class="ion-padding-bottom ion-text-center labels1 ion-text-uppercase" > adivina el número </h1>
 
         <ion-label class="labels1 ">Introduzca número entre 0 y 100:</ion-label>
 
@@ -35,7 +35,7 @@
     <!--"ELSE del IF(1); "MOSTRANDO LA "CARD" de GANADOR.-->
     <ng-template #winner>
 
-        <ion-card-content class="ion-margin">
+        <ion-card-content class="ion-margin-left ion-margin-right">
             
             <h1 class="ion-padding ion-text-center labels1 ion-text-uppercase" > Número adivinado </h1>
 
@@ -44,24 +44,25 @@
             <h1 class="ion-text-center labels2" style="margin-top: 5%;" >{{numberFinal}}<br />¡¡Era el número Secreto!!</h1>
 
 
-            <ion-button class="ion-margin-top" (click)="reTry()"  shape="round">
+            <ion-button class="ion-margin-top ion-text-capitalize" routerLink="/status" expand="block" shape="round">
+                ver status
+            </ion-button>
+
+            <ion-button class="ion-margin-top ion-text-uppercase" (click)="reTry()" expand="block" shape="round">
                 Volver a Jugar
             </ion-button>
 
-            <ion-button class="ion-margin-top" routerLink="/status"  shape="round">
-                ver status
-            </ion-button>
         </ion-card-content>
 
     </ng-template> <!--FIN DEL "IF-ELSE(1)";-->
    
 
 
-    <ion-card *ngIf="numberFinal >= 0 && numberFinal !== numSecret;">
+    <ion-card class="ion-text-center" *ngIf="numberFinal >= 0 && numberFinal !== numSecret;">
 
-        <h1 class="ion-text-center labels1" >¡¡Vuelva a Intentarlo!!</h1>
-        <img style="width: auto;height: auto; margin: auto; margin-bottom: 0; border-radius:50%;" alt="grootParanoya" src="../../../assets/images/grootLose.jpg">
-        <h5 class="ion-text-center labels2" style="margin-top: -4%; margin-bottom: 10px;"><br />El número <h1 style="margin: 0px;"><strong>{{numberFinal}}</strong></h1> <strong>{{hintNumber}} que<br />el número SECRETO.</strong></h5>
+        <h1 class="labels1" >¡¡Vuelva a Intentarlo!!</h1>
+        <img style="width: 80%;height: 80%; margin: auto; margin-bottom: 0; border-radius:50%;" alt="grootParanoya" src="../../../assets/images/grootLose.jpg">
+        <h5 class=" labels2" style="margin-top: -4%; margin-bottom: 10px;"><br />El número <h1 style="margin: 0px;"><strong>{{numberFinal}}</strong></h1> <strong>{{hintNumber}} que<br />el número SECRETO.</strong></h5>
 
     </ion-card>
 
