@@ -18,7 +18,7 @@ export class InicioPage implements OnInit {
   hintNumber: string;
 
   constructor(private dataService: DataService) {
-  debugger;
+
   }
 
 
@@ -53,7 +53,7 @@ export class InicioPage implements OnInit {
 
       } else if (this.numberFinal === this.numSecret) {
         this.dataService.attemps=this.dataService.attemps+1; //SUMANDO error Cometido al "services/data".
-        this.dataService.calculateMedia(); //Calculando media error Cometido al "services/data".
+        this.dataService.calculateMedia(); //Calculando 'media de errores' Cometido al "services/data".
 
       }
 
