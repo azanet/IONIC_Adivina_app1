@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/davidf/Escritorio/3-DAM/DesarrolloMoviles_PGL/Actividades/Actividad2/adivina/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/davidf/.gradle/caches/transforms-3/393393c1bbd83df1dd999d3897a2caae/transformed/appcompat-1.2.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
